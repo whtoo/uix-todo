@@ -1,0 +1,11 @@
+{
+  "name": "uix-todo",
+  "private": true,
+  "version": "0.1.0",
+  "devDependencies": {
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "react-refresh": "^0.17.0",
+    "shadow-cljs": "^3.2.1"
+  }
+}
