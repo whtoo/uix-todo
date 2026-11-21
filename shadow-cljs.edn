@@ -1,11 +1,13 @@
-;; :deps true 表示依赖和源码路径全部交给 deps.edn 管，
-;; 这里只管构建配置。npm 端的依赖在 package.json。
+;; :deps true → 依赖与源码路径全部交给 deps.edn（唯一依赖清单）。
+;; dev server: http://localhost:8000 ；/api 代理到 3080（阶段2后端基线）。
+;; 启动：npm install && clojure -M -m shadow.cljs.devtools.cli watch app
 {:deps {:aliases [:dev]}
- :dev-http {8000 "public"}
+ :dev-http {8000 {:root "public"
+                  :proxy-url "http://localhost:3080"}}
  :nrepl {:port 9000}
  :builds
  {:app {:target :browser
         :output-dir "public/js"
         :asset-path "/js"
-        :modules {:main {:init-fn app.core/start}}
+        :modules {:main {:init-fn loom.ui/start}}
         :devtools {:preloads [uix.preload]}}}}

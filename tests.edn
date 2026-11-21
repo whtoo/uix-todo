@@ -1,0 +1,3 @@
+#kaocha/v1
+{:tests [{:id :unit :test-paths ["test"]}]}
+;; 阶段6：在此加属性测试 profile（test.check / malli 生成器派生）

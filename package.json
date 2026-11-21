@@ -1,7 +1,8 @@
 {
-  "name": "uix-todo",
+  "name": "taskloom",
   "private": true,
   "version": "0.1.0",
+  "description": "个人任务管理 — Clojure 全栈 DDD 实践项目（UIx 2 前端）",
   "devDependencies": {
     "react": "19.2.0",
     "react-dom": "19.2.0",
