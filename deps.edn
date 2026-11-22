@@ -7,10 +7,11 @@
         http-kit/http-kit    {:mvn/version "2.8.0"}
         metosin/muuntaja     {:mvn/version "0.6.10"}
         metosin/malli        {:mvn/version "0.20.1"}
+        ;; ── 已启用：阶段3 数据层（next.jdbc + SQLite + HoneySQL，对应指南 3.11④）──
+        com.github.seancorfield/next.jdbc {:mvn/version "1.3.955"}
+        org.xerial/sqlite-jdbc             {:mvn/version "3.46.1.3"}
+        com.github.seancorfield/honeysql   {:mvn/version "2.7.1437"}
         ;; ── 门控：进入对应阶段时取消注释（一次只加一样）──
-        ;; 阶段3 数据层   com.github.seancorfield/next.jdbc {:mvn/version "1.3.955"}
-        ;;                org.xerial/sqlite-jdbc            {:mvn/version "3.46.1.3"}
-        ;;                com.github.seancorfield/honeysql  {:mvn/version "2.7.1437"}
         ;; 阶段4 REST校验 metosin/reitit-malli {:mvn/version "0.11.0"}
         ;; 阶段5 日期边界 juxt/tick           {:mvn/version "<以 Clojars 最新为准>"}
         }
