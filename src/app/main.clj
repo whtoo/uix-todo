@@ -7,7 +7,10 @@
             [reitit.ring :as ring]
             [reitit.ring.middleware.muuntaja :as muuntaja-mw]))
 
-(defn app []
+(def app
+  "1-arity Ring handler：http-kit run-server 以请求 map 调用 Var 值，app 必须是处理函数本身。
+  2026-11-22 冒烟发现模板缺陷：原 (defn app [] ...) 为零参函数，run-server 以 1 参调用
+  触发 ArityException，导致 /health、/echo 每次请求 500。"
   (ring/ring-handler
    (ring/router
     [["/health" {:get (fn [_] {:status 200 :body {:status "ok"}})}]

@@ -1,9 +1,13 @@
 (ns loom.schema
   "通用语言的机器可读词汇表（共享内核）。
   纪律：领域词只在这里定义；其它命名空间引用，不复制、不改写。
-  量纲以 schema 元数据存在（:unit），供校验/生成/文档消费，不进 DB。"
+  量纲以 schema 元数据存在（:unit），供校验/生成/文档消费，不进 DB。
+  2026-11-22 修复：::task/、::time/ 自动解析关键字需要 ns 别名——
+  补 loom.task / loom.time require（模板缺失，JVM 读取期报 Invalid token）。"
   (:require [malli.core :as m]
-            [malli.registry :as mr]))
+            [malli.registry :as mr]
+            [loom.task :as task]
+            [loom.time :as time]))
 
 (def registry
   (mr/registry
