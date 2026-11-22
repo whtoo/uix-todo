@@ -4,6 +4,9 @@ classes/
 .cpcache/
 .nrepl-port
 *.class
+.calva
+.clj-kondo/
+
 
 # 编辑器
 .lsp/

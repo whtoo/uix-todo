@@ -4,7 +4,7 @@
 
 (defn greet
   [name]
-  (str "hello, " name))
+  (str "hello ->> , " name))
 
 (comment
   ;; 每次 REPL 会话的第一个动作：验证热改链路
