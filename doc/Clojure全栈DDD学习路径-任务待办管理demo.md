@@ -163,8 +163,8 @@
 **目标**：完成四视图：任务列表、任务表单、计时器条、今日视图 + 近 7 天统计面板。
 
 **任务卡**
-1. shadow-cljs 链路（本仓库已配好：deps.edn 双轨 + dev-http 代理 /api → 3080）。
-2. 组件层用 UIx 2（本仓库现状）；明确记录：换 Reagent 是机械替换，本阶段不引入。
+1. shadow-cljs 链路（模板分支 `template/fullstack` 已配好：deps.edn 双轨 + dev-http 代理 /api → 3080；纯后端 main 已移除此配置）。
+2. 组件层用 UIx 2（模板分支现状）；明确记录：换 Reagent 是机械替换，本阶段不引入。
 3. re-frame 接线：
    - 自己写一个 `::http` fx（fetch 封装，不用现成库）
    - 事件流：`::load-tasks` → `::tasks-loaded`；`::start-timer` / `::stop-timer` → 成功后刷新 active 与时间条目

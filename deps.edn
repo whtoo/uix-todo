@@ -1,10 +1,7 @@
 {:paths ["src" "resources"]
 
- ;; JVM 与 cljs 双轨依赖的唯一清单；shadow-cljs.edn 用 :deps true 全权引用本文件。
- :deps {org.clojure/clojure  {:mvn/version "1.12.7"}
-        thheller/shadow-cljs {:mvn/version "3.2.1"}
-        com.pitch/uix.core   {:mvn/version "1.4.9"}
-        com.pitch/uix.dom    {:mvn/version "1.4.9"}
+ ;; JVM/Clojure 后端依赖的唯一清单。
+ :deps {org.clojure/clojure {:mvn/version "1.12.7"}
         ;; ── 已启用：阶段2基线 + 领域词汇表 ──
         metosin/reitit       {:mvn/version "0.11.0"}
         http-kit/http-kit    {:mvn/version "2.8.0"}
@@ -19,8 +16,7 @@
         }
 
  :aliases
- {:dev  {:extra-deps {binaryage/devtools {:mvn/version "1.0.7"}}}
-  :test {:extra-paths ["test"]
+ {:test {:extra-paths ["test"]
          :extra-deps  {lambdaisland/kaocha {:mvn/version "1.91.1392"}}
          :main-opts   ["-m" "kaocha.runner"]}
   ;; 阶段6 uberjar：届时引入 io.github.clojure/tools.build + build.clj

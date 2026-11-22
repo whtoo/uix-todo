@@ -9,12 +9,6 @@ classes/
 .lsp/
 .clj-kondo/.cache
 
-# shadow-cljs 产物
-public/js/
-node_modules/
-.shadow-cljs/
-out/
-
 # 运行时数据
 *.db
 *.db-journal
