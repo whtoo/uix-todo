@@ -17,7 +17,9 @@
         }
 
  :aliases
- {:nrepl {:extra-deps {nrepl/nrepl {:mvn/version "1.3.1"}}
+ ;; Calva Jack-in 会注入 cider-nrepl/cider.piggieback 版本（见 .vscode/settings.json 的
+ ;; calva.jackInDependencyVersions）；此处只固定 nREPL 自身，与注入版本保持一致。
+ {:nrepl {:extra-deps {nrepl/nrepl {:mvn/version "1.8.0"}}
           :main-opts  ["-m" "nrepl.cmdline" "--port" "9000"]}
   :test {:extra-paths ["test"]
          :extra-deps  {lambdaisland/kaocha {:mvn/version "1.91.1392"}}

@@ -1,0 +1,7 @@
+{
+  "calva.jackInDependencyVersions": {
+    "nrepl": "1.8.0",
+    "cider-nrepl": "0.64.1",
+    "cider/piggieback": "0.8.0"
+  }
+}
