@@ -1,12 +1,19 @@
 {
+  // Calva 注入 Jack-in 的依赖版本（覆盖扩展自带默认）
   "calva.jackInDependencyVersions": {
     "nrepl": "1.8.0",
     "cider-nrepl": "0.64.1",
     "cider/piggieback": "0.8.0"
   },
+  // eval 结果同时落 REPL 窗口和 Calva Output 终端
+  // （Calva 新版默认只发终端+侧边栏，repl 窗口里看不到结果）
   "calva.outputDestinations": {
     "evalResults": ["repl-window", "terminal"],
     "evalOutput": ["repl-window", "terminal"],
     "otherOutput": "terminal"
-  }
+  },
+  // 保存即整文件 eval 进 REPL（文件写一半保存会报红，介意就删掉这行）
+  "calva.evalOnSave": true,
+  // jack-in 连接后自动打开 REPL 窗口
+  "calva.autoOpenREPLWindow": true
 }
