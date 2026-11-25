@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f5f6f8">
+  <meta name="description" content="以每次真实工作为中心的任务记录、类任务形成与事实复盘。">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%233157d5'/%3E%3Cpath d='M20 18h24M32 18v28M20 32h24M20 46h24' stroke='white' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <title>迹 · 工作记录</title>
+  <link rel="stylesheet" href="./src/styles.css?v=20261125">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="主导航">
+      <a class="brand" href="#now" aria-label="迹，返回现在">
+        <span class="brand-mark" aria-hidden="true">迹</span>
+        <span>迹 · 工作记录</span>
+      </a>
+      <button class="icon-button nav-close" type="button" data-action="close-nav" aria-label="关闭导航" data-icon="close"></button>
+      <nav>
+        <p class="nav-label">行动</p>
+        <a class="nav-item" href="#now" data-nav="now"><span data-icon="bolt"></span><span>现在</span></a>
+        <a class="nav-item" href="#board" data-nav="board"><span data-icon="board"></span><span>看板</span></a>
+        <a class="nav-item" href="#list" data-nav="list"><span data-icon="list"></span><span>列表</span></a>
+        <a class="nav-item" href="#time" data-nav="time"><span data-icon="clock"></span><span>时间记录</span></a>
+        <p class="nav-label nav-label-know">认识</p>
+        <a class="nav-item" href="#review" data-nav="review"><span data-icon="chart"></span><span>复盘</span><span class="nav-count">2</span></a>
+        <a class="nav-item" href="#class" data-nav="class"><span data-icon="layers"></span><span>类任务</span></a>
+      </nav>
+      <div class="sidebar-footer">
+        <button class="nav-item button-reset" type="button" data-action="help"><span data-icon="help"></span><span>使用帮助</span></button>
+      </div>
+    </aside>
+    <button class="nav-backdrop" type="button" data-action="close-nav" aria-label="关闭导航"></button>
+
+    <div class="workspace">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="icon-button menu-button" type="button" data-action="open-nav" aria-label="打开导航" data-icon="menu"></button>
+          <span class="breadcrumb" id="breadcrumb">现在</span>
+        </div>
+        <div class="topbar-actions">
+          <button class="icon-button" type="button" data-action="search" aria-label="搜索任务" data-icon="search"></button>
+          <button class="avatar" type="button" data-action="account" aria-label="本地数据与设置">W</button>
+        </div>
+      </header>
+      <main class="main" id="main" tabindex="-1"></main>
+    </div>
+  </div>
+
+  <dialog class="app-dialog" id="app-dialog" aria-labelledby="dialog-title">
+    <div id="dialog-content"></div>
+  </dialog>
+  <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+  <script src="./src/main.js?v=20261125" defer></script>
+</body>
+</html>

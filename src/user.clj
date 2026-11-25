@@ -11,6 +11,13 @@
   (greet "world")
 
   ;; 阶段 3 之后，这里长这样：
-  ;; (require '[loom.task :as task])
-  ;; (task/create-task! db {:task/title "写第一个聚合" ...})
+  ;; (require '[loom.task :as task] '[loom.time :as time])
+  ;; (task/capture-task! db {:task/id (random-uuid)
+  ;;                         :task/title "写第一个实例"
+  ;;                         :task/objective "走通 Capture → Start → Pause → Complete"
+  ;;                         :task/background {}
+  ;;                         :task/incidental? true
+  ;;                         :task/interruption-policy :task.interruption/interruptible
+  ;;                         :task/resumable? true})
+  ;; (time/start-task! db task-id)
   )
