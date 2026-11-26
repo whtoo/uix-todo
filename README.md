@@ -67,6 +67,7 @@ clojure -M:test --skip-meta pending
 - `doc/Clojure全栈DDD学习路径-任务待办管理demo.md` — 六阶段任务卡与验收走查。
 - `doc/Clojure-DDD实践指南.md` — 战术模式、事务边界、投影、存储与测试纪律。
 - `doc/阶段技术指引.md` — REPL、SQLite、依赖、构建等已撞技术坑。
+- `doc/阶段3实现顺序.md` — 写路径 10 步顺序、每步 REPL 验收探针与第 8 步重叠判断清单。
 - `frontend-demo/迹_纯HTML_JS工程/` — 纯 HTML/JS 交互原型，直接用静态服务器打开即可。
 
 ## 分支快照
