@@ -77,6 +77,8 @@ clojure -M:test --skip-meta pending
 | `template/fullstack` | 原始 Clojure + ClojureScript/UIx 模板存档，固定在 `991c7c2`，永不修改 |
 
 后续接入 CLJS 时参考模板配置和纯 HTML 原型，但不要修改模板存档，也不要把原型演示状态当成后端 schema。
+- `doc/superpowers/` — 历史设计存档（模板剥离设计 spec 与 plan），现行文档都在 `doc/` 根下。
+
 
 ## License
 
